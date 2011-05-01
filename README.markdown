@@ -23,7 +23,9 @@ slice
     
     console.dir(bufs.slice(2,8))
 
-Output:
+output:
+
+    $ node examples/slice.js 
     <Buffer 03 04 05 06 07 08>
 
 splice
@@ -42,10 +44,11 @@ splice
         bufs : bufs.slice(),
     });
     
-    /* Output:
+output:
+
+    $ node examples/splice.js
     { removed: <Buffer 03 04 05 06>,
       bufs: <Buffer 01 02 07 08 09 0a> }
-    */
 
 methods
 =======
