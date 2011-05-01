@@ -10,10 +10,13 @@ function Buffers (bufs) {
 
 Buffers.prototype.push = function () {
     for (var i = 0; i < arguments.length; i++) {
-        var buf = arguments[i];
-        if (!Buffer.isBuffer(buf)) {
+        if (!Buffer.isBuffer(arguments[i])) {
             throw new TypeError('Tried to push a non-buffer');
         }
+    }
+    
+    for (var i = 0; i < arguments.length; i++) {
+        var buf = arguments[i];
         this.buffers.push(buf);
         this.length += buf.length;
     }
@@ -22,10 +25,13 @@ Buffers.prototype.push = function () {
 
 Buffers.prototype.unshift = function () {
     for (var i = 0; i < arguments.length; i++) {
-        var buf = arguments[i];
-        if (!Buffer.isBuffer(buf)) {
+        if (!Buffer.isBuffer(arguments[i])) {
             throw new TypeError('Tried to unshift a non-buffer');
         }
+    }
+    
+    for (var i = 0; i < arguments.length; i++) {
+        var buf = arguments[i];
         this.buffers.unshift(buf);
         this.length += buf.length;
     }
