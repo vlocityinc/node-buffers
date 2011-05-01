@@ -9,15 +9,15 @@ function Buffers (bufs) {
 }
 
 Buffers.prototype.push = function () {
-    var res = this.buffers.push.apply(this.buffers, arguments);
     for (var i = 0; i < arguments.length; i++) {
         var buf = arguments[i];
         if (!Buffer.isBuffer(buf)) {
             throw new TypeError('Tried to push a non-buffer');
         }
+        this.buffers.push(buf);
         this.length += buf.length;
     }
-    return res;
+    return this.length;
 };
 
 Buffers.prototype.unshift = function () {
