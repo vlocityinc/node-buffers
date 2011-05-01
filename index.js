@@ -21,11 +21,15 @@ Buffers.prototype.push = function () {
 };
 
 Buffers.prototype.unshift = function () {
-    var res = this.buffers.unshift.apply(this.buffers, arguments);
     for (var i = 0; i < arguments.length; i++) {
-        this.length += arguments[i].length;
+        var buf = arguments[i];
+        if (!Buffer.isBuffer(buf)) {
+            throw new TypeError('Tried to unshift a non-buffer');
+        }
+        this.buffers.unshift(buf);
+        this.length += buf.length;
     }
-    return res;
+    return this.length;
 };
 
 Buffers.prototype.copy = function (dst, dStart, start, end) {
