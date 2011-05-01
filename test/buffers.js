@@ -141,7 +141,7 @@ exports.push = function () {
     );
     
     assert.throws(function () {
-        bufs.push('moo');
+        bufs.push(new Buffer([11,12]), 'moo');
     });
     assert.eql(bufs.buffers.length, 4);
 };
@@ -156,6 +156,10 @@ exports.unshift = function () {
         [].slice.call(bufs.slice()),
         [0,1,2,3,4,5,6,7,8,9]
     );
+    assert.throws(function () {
+        bufs.unshift(new Buffer([-2,-1]), 'moo');
+    });
+    assert.eql(bufs.buffers.length, 4);
 };
 
 exports.get = function () {
