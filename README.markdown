@@ -86,3 +86,13 @@ Works just like `Array.prototype.splice`, even the replacement part!
 Copy the buffer collection as if it were contiguous to the `dst` Buffer with the
 specified bounds.
 Works just like `Buffer.prototype.copy`.
+
+.get(i)
+-------
+
+Get a single element at index `i`.
+
+.set(i, x)
+----------
+
+Set a single element's value at index `i`.
