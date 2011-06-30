@@ -191,7 +191,7 @@ Buffers.prototype.set = function set (i, b) {
     return this.buffers[pos.buf].set(pos.offset, b);
 };
 
-Buffers.prototype.find = function find (needle, offset) {
+Buffers.prototype.indexOf = function (needle, offset) {
     if ("string" === typeof needle) {
         needle = new Buffer(needle);
     } else if (needle instanceof Buffer) {
