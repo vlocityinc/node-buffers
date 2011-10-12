@@ -109,3 +109,14 @@ of the search. This can be used to find additional matches.
 
 This function will return the correct result even if the search string
 is spread out over multiple internal buffers.
+
+.toBuffer()
+-----------
+
+Convert the buffer collection to a single buffer, equivalent with `.slice(0, buffers.length)`;
+
+.toString(encoding, start, end)
+-----------
+
+Decodes and returns a string from the buffer collection.
+Works just like `Buffer.prototype.toString`
