@@ -97,7 +97,7 @@ Get a single element at index `i`.
 
 Set a single element's value at index `i`.
 
-.find(needle, offset)
+.indexOf(needle, offset)
 ----------
 
 Find a string or buffer `needle` inside the buffer collection. Returns
