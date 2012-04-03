@@ -120,3 +120,8 @@ Convert the buffer collection to a single buffer, equivalent with `.slice(0, buf
 
 Decodes and returns a string from the buffer collection.
 Works just like `Buffer.prototype.toString`
+
+license
+=======
+
+MIT/X11
