@@ -9,6 +9,8 @@ everything over.
 This is a cleaner more Buffery rehash of
 [bufferlist](http://github.com/substack/node-bufferlist).
 
+[![build status](https://secure.travis-ci.org/substack/node-buffers.png)](http://travis-ci.org/substack/node-buffers)
+
 example
 =======
 
